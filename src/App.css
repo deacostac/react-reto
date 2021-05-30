@@ -1,0 +1,33 @@
+@font-face {
+  font-family: circular-std-medium;
+  src: url(./assets/font/Circular-Std-Medium.otf);
+}
+
+.App {
+  text-align: center;
+}
+
+a {
+  font-family: circular-std-medium;
+}
+
+p {
+  font-family: circular-std-medium;
+  color: rgb(58, 58, 58);
+}
+
+label {
+  font-size: 0.7rem;
+  font-family: circular-std-medium;
+}
+
+input.form-control,
+input.form-control:focus {
+  background: #f0f0ff;
+}
+
+.error {
+  position: absolute;
+  color: white;
+  font-size: 0.6rem;
+}
