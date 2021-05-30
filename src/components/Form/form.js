@@ -5,7 +5,9 @@ import { Modal } from '@material-ui/core';
 //import { TextField } from './textField';
 //import * as Yup from 'yup';
 
+//this destructurin receives a status to know if it should show the form or not
 const FormAir = ({showForm, setShowForm}) => {
+
 
 /* This fragment of code is validation through formik, it is functional but I wanted to leave the validation by html active
 
@@ -66,6 +68,7 @@ const FormAir = ({showForm, setShowForm}) => {
         edad: ""
     });
 
+    //This is the body of the modal
     const bodyModal = (
         <div className="modal">
             <div align="center">
@@ -77,7 +80,7 @@ const FormAir = ({showForm, setShowForm}) => {
         </div>
     )
 
-
+    // this function check the changes in the form inputs
     const handleInputChange = (event) => {
         setValues({
             ...values,
@@ -85,6 +88,7 @@ const FormAir = ({showForm, setShowForm}) => {
         })
     }
 
+    //this function receives the values ​​of the inputs sends them to the console and warns the modal that it should appear for 5 seconds
     const sendValues = (event) => {
         event.preventDefault()
         console.log(values)
@@ -95,7 +99,7 @@ const FormAir = ({showForm, setShowForm}) => {
 
     }
 
-
+    //this is the structure of the Form
     return (
         <>
           { showForm &&  
