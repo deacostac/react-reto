@@ -2,9 +2,10 @@ import React, {useState} from 'react'
 import './menu.css';
 import Logo from '../../assets/logo.png';
 
+//I take the values ​​from the json file and store them in the data variable
 const data = require('../../assets/info.json');
 
-
+//this destructurin receives a status to know if it should show the form or not
 const Menu = ({showForm, setShowForm}) => {
 
     const [airline, setAirline] = useState(null);
@@ -34,6 +35,7 @@ const Menu = ({showForm, setShowForm}) => {
         
     }
 
+    //load the menu when starting the page
     window.onload = () => {
         addMenuItem();
     }
