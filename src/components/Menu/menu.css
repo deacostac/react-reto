@@ -75,7 +75,7 @@
 }
 
 .welcome {
-  padding: 5%;
+  padding: 10%;
 }
 
 @media (min-width: 920px) {
@@ -100,5 +100,9 @@
   }
   .navbar a:hover {
     color: rgb(158, 158, 158);
+  }
+
+  .welcome {
+    padding: 5%;
   }
 }
