@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Oxygen&display=swap");
+
 @font-face {
   font-family: circular-std-medium;
   src: url(./assets/font/Circular-Std-Medium.otf);
@@ -8,17 +10,17 @@
 }
 
 a {
-  font-family: circular-std-medium;
+  font-family: "Oxygen", sans-serif;
 }
 
 p {
-  font-family: circular-std-medium;
+  font-family: "Oxygen", sans-serif;
   color: rgb(58, 58, 58);
 }
 
 label {
   font-size: 0.7rem;
-  font-family: circular-std-medium;
+  font-family: "Oxygen", sans-serif;
 }
 
 input.form-control,
