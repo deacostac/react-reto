@@ -9,21 +9,19 @@ const data = require('../../assets/info.json');
 const Menu = ({showForm, setShowForm}) => {
 
     const [airline, setAirline] = useState(null);
+    const navBar = React.createRef();
+    const menuOpen = React.createRef();
 
     //Function that opens and closes the hamburger menu
     const handleChangeMenu = () =>{
         setShowForm(true);
-        let navBar = document.getElementById('navbar');
-        navBar.classList.toggle('navbar-open');
-        let menuOpen = document.getElementById('menu-toggle');
-        menuOpen.classList.toggle('menu-open');     
+        navBar.current.classList.toggle('navbar-open');
+        menuOpen.current.classList.toggle('menu-open');     
     }
 
     //open and close MenuHamburger mobile
     const handleChangeToggle = () =>{
-        let navBar = document.getElementById('navbar');
-        navBar.classList.toggle('navbar-open');
-            
+        navBar.current.classList.toggle('navbar-open');      
     }
     
 
@@ -54,12 +52,12 @@ const Menu = ({showForm, setShowForm}) => {
                 <div className="logo-container">
                     <img className="header-logo" src={Logo} alt="itGlobers" />
                 </div>
-                <nav id="navbar" className="navbar" onClick={handleChangeMenu}>
+                <nav id="navbar" className="navbar" ref={navBar} onClick={handleChangeMenu}>
                     <ul id="menu-item" onClick={handleChangeToggle}>
                     {addMenuItem()}
                     </ul>
                 </nav>
-                <div id="menu-toggle" className="menu-toggle" onClick={handleChangeToggle}>
+                <div id="menu-toggle" className="menu-toggle" ref={menuOpen} onClick={handleChangeToggle}>
                     <div className="hamburguer"></div>
                 </div>
                 </div>
