@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useRef} from 'react'
 import './form.css';
 import { Modal } from '@material-ui/core';
 //import { Formik, Form } from 'formik';
@@ -68,6 +68,8 @@ const FormAir = ({showForm, setShowForm}) => {
         edad: ""
     });
 
+    const formulario = React.createRef()
+
     //This is the body of the modal
     const bodyModal = (
         <div className="modal">
@@ -94,7 +96,8 @@ const FormAir = ({showForm, setShowForm}) => {
         console.log(values)
         setShowModal(true);
         setTimeout(function(){ setShowModal(false) }, 5000);
-        document.getElementById("formulario").reset();
+        //document.getElementById("formulario").reset();
+        formulario.current.reset();
         setShowForm(false)
 
     }
@@ -103,7 +106,7 @@ const FormAir = ({showForm, setShowForm}) => {
     return (
         <>
           { showForm &&  
-            <form id="formulario" className="form-one" onSubmit={sendValues}>
+            <form id="formulario" className="form-one" onSubmit={sendValues} ref={formulario}>
                 <h1 className="title">Formulario</h1>
                 <div className="inp">
                     <label htmlFor="nombre">Nombre</label>
