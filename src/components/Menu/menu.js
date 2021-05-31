@@ -18,6 +18,13 @@ const Menu = ({showForm, setShowForm}) => {
         let menuOpen = document.getElementById('menu-toggle');
         menuOpen.classList.toggle('menu-open');     
     }
+
+    //open and close MenuHamburger mobile
+    const handleChangeToggle = () =>{
+        let navBar = document.getElementById('navbar');
+        navBar.classList.toggle('navbar-open');
+            
+    }
     
 
     //Function that paints the menu items according to the json file
@@ -47,12 +54,12 @@ const Menu = ({showForm, setShowForm}) => {
                 <div className="logo-container">
                     <img className="header-logo" src={Logo} alt="itGlobers" />
                 </div>
-                <nav id="navbar" className="navbar">
-                    <ul id="menu-item" >
+                <nav id="navbar" className="navbar" onClick={handleChangeMenu}>
+                    <ul id="menu-item" onClick={handleChangeToggle}>
                     {addMenuItem()}
                     </ul>
                 </nav>
-                <div id="menu-toggle" className="menu-toggle" onClick={handleChangeMenu}>
+                <div id="menu-toggle" className="menu-toggle" onClick={handleChangeToggle}>
                     <div className="hamburguer"></div>
                 </div>
                 </div>
