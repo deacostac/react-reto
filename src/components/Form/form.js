@@ -122,7 +122,7 @@ const FormAir = ({showForm, setShowForm}) => {
                 </div>
                 <div className="inp">
                     <label htmlFor="edad">Edad</label>
-                    <input type="range" id="edad "min="18" max="100" placeholder="Edad" className="fields" onChange={handleInputChange} name="edad" required></input>
+                    <input type="range" id="edad "min="18" max="100" placeholder="Edad" className="fields-range" onChange={handleInputChange} name="edad" required></input>
                     <span id="ed">{values.edad + " años"}</span>
                 </div>
                 <button type="submit" className="btn-submit">Enviar</button>
