@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import './menu.css';
 import Logo from '../../assets/logo.png';
 
@@ -41,9 +41,9 @@ const Menu = ({showForm, setShowForm}) => {
     }
 
     //load the menu when starting the page
-    window.onload = () => {
+    useEffect(() => {
         addMenuItem();
-    }
+      });
 
     return (
         <>
